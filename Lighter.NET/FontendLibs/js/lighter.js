@@ -7405,10 +7405,11 @@ function $LighterDatePicker() {
     this.nextMonthBtn = undefined;
     this.cancelBtn = undefined;
     this.onCompleteCallback = undefined;
+    this.zIndex = 3000;
 
 }
 
-$LighterDatePicker.prototype.initialize = function ({id,targetSelector, startDate, endDate, value, lang, yearOrder, width, onCompleteCallback } = {}) {
+$LighterDatePicker.prototype.initialize = function ({id,targetSelector, startDate, endDate, value, lang, yearOrder, width, onCompleteCallback, zIndex } = {}) {
 
     if (this.container) {
         console.log(`Warning: $LighterDatePicker.initialize() aborted. this object has already been initialized.`)
@@ -7476,6 +7477,17 @@ $LighterDatePicker.prototype.initialize = function ({id,targetSelector, startDat
     //onComplete callback
     if (onCompleteCallback) {
         this.onCompleteCallback = onCompleteCallback;
+    }
+
+    //z-index
+    if (zIndex) {
+        try {
+            let intZIndex = parseInt(zIndex);
+            if (intZIndex < 3000) intZIndex = 3000; //minium
+            this.zIndex = intZIndex;
+        } catch (err) {
+            //safely ignore this exception
+        }
     }
 
     this.createUiComponent();
@@ -7824,7 +7836,10 @@ $LighterDatePicker.prototype.createUiComponent = function () {
 
     //style
     this.container.style = `width:${this.width}px !important;min-width:${this.width}px !important;max-width:${this.width}px !important;`;
-    this.container.classList.add('lighter-datepicker', 'hide','test-datepicker');
+    this.container.classList.add('lighter-datepicker', 'hide', 'test-datepicker');
+    if (this.zIndex > 3000) {
+        this.container.style.setProperty('z-index', this.zIndex,'important');
+    }
     this.headerPanel.classList.add('header-panel');
     this.ymPanel.classList.add('year-month-panel');
     this.wkPanel.classList.add('weekday-panel');

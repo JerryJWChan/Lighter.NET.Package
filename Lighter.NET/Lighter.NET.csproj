@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<Version>1.4.0</Version>
+		<DebugType>embedded</DebugType>
+		<Description>Lighter.NET is an light-weighted and intergrated package containing both back-end and front-end libraries, aiming to help developers to create .NET web application more efficiently, delightfully and decoupled from the .NET versions and unnecessary external dependancies.
+
+With Lighter.NET, you can:
+1. Say Goodbye to the notorious ViewData and ViewBag forever.
+2. Say Goodby to the long-winded Entity Data Model file structures, such as *.edmx, *.Context.tt, *.Designer.cs, and unecessary DbSet for db table mapping.
+3. Say Goodbye to ever changing HtmlHelper or TagHelper as .NET version rapidly increasing.
+4. Say Hello to a more clean, concise and elegant front-end and back-end coding style.
+5. Say Hello to a more efficient localization mechanism with CompositeLocalizer.
+6. Say Goodbye to jQuery.
+7. Say Goodbye to Bootstrap.</Description>
+		<PackageReleaseNotes> 1. Add $LighterObject.autoComplete() method in lighter.js. The autoComplete() features an onCompleteCallback to provide more sophisticated intercation to the matched option, a mustMatch flag to prevent arbitrary input and a support to synonyms lookup.
+ 2. Remove ApiResultHelper
+ 3. Remove DebugMessages from ApiResult
+ 4. Add private _exceptions field and public AddException() and Exceptions() methods to ApiResult to make it capable deliver exception object out to the caller. In the mean while, avoid sensitive security information to be expose to client while doing json serialization.
+ 5. Bug fix for ValidationHelper</PackageReleaseNotes>
+    </PropertyGroup>
+    <ItemGroup>
+	    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+		<None Include="docs\README.md" Pack="true" PackagePath="\" />
+    </ItemGroup>
+</Project>

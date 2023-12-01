@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lighter.NET.DB", "Lighter.NET.DB.csproj", "{BC6944DB-2310-4E15-876A-4282CFD3D51D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC6944DB-2310-4E15-876A-4282CFD3D51D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC6944DB-2310-4E15-876A-4282CFD3D51D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC6944DB-2310-4E15-876A-4282CFD3D51D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC6944DB-2310-4E15-876A-4282CFD3D51D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {911ECBB5-3E2B-4313-B873-73E5D4B7A3D0}
+	EndGlobalSection
+EndGlobal

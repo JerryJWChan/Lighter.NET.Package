@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+	    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+	    <PackageReadmeFile>README.md</PackageReadmeFile>
+	    <Version>1.3.1</Version>
+		<DebugType>embedded</DebugType>
+	    <Description>Lighter.NET.DB is a Lightweight ORM data access layer utilizing Entity Framework 6.4.4. It aims to provide an easy to use and flexsible and more efficient db access experience for developer. 
+
+With Lighter.NET.DB, you can Say Goodby to the long-winded Entity Data Model file structures, such as *.edmx, *.Context.tt, *.Designer.cs, and unecessary DbSet for db table mapping.
+
+It features the followings:
+1. Full select, insert, update, delete support in ORM approach.
+2. Easy data paging for select result set.
+3. Automatic logging for update and delete operation.
+4. Simpify the transactional db operations that eliminates all the boilerplate code of using tranaction, try...catch, commit when success and rollback when failure.
+</Description>
+	    <PackageReleaseNotes>1. Bug fix for DbServiceBase.BuildRowCountSql() to handle sql syntax which contains Union keyword.</PackageReleaseNotes>
+	    <IncludeSymbols>False</IncludeSymbols>
+	    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+	<ItemGroup>
+	  <PackageReference Include="EntityFramework" Version="6.4.4" />
+	  <PackageReference Include="Lighter.NET" Version="1.4.0" />
+	  <None Include="docs\README.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
+</Project>
